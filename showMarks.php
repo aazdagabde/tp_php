@@ -1,7 +1,7 @@
 <?php
-/* ------------------------- Sécurité (facultatif) ------------------------- */
-session_start();           // supprime ces deux lignes si l’accès est public
-// if (!isset($_SESSION['login'])) { header('Location: login.php'); exit(); }
+
+session_start();           
+
 
 /* ---------------------- Connexion base de données ----------------------- */
 try {
