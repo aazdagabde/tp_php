@@ -1,8 +1,9 @@
+# .github/workflows/deploy.yml
 name: Deploy to InfinityFree
 
 on:
   push:
-    branches: [ "main" ]         # déploiement seulement quand tu push
+    branches: [ "main" ]          # déploie seulement les pushes sur main
 
 jobs:
   deploy:
@@ -13,10 +14,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5   # <-- tag complet
         with:
-          server: ${{ secrets.FTP_SERVER }}      # ex: ftpupload.net
-          username: ${{ secrets.FTP_USERNAME }}  # ex: if0_39105974
-          password: ${{ secrets.FTP_PASSWORD }}  # ton mot de passe FTP
-          local-dir: ./                          # racine du repo
-          server-dir: /htdocs/                   # dossier public InfinityFree
+          server:   ${{ secrets.FTP_SERVER }}         # ftpupload.net
+          username: ${{ secrets.FTP_USERNAME }}       # if0_39105974
+          password: ${{ secrets.FTP_PASSWORD }}       # ton mdp FTP
+          local-dir: ./                              # racine du repo
+          server-dir: /htdocs/                       # dossier public
