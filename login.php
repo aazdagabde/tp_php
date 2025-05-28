@@ -65,10 +65,13 @@ $sql = "SELECT * FROM admin WHERE login = :username AND password = :password";
                     <button type="submit" class="btn btn-default">Login</button>
                 </form>
             </div>
+          
         </div>
     </div>
 
-
+  <p class="text-center" style="margin-top:12px;">
+    <a href="showMarks.php" class="btn btn-link">Voir les notes (Show Marks)</a>
+</p>
 </body>
 <footer class="container-fluid bg-light">
     <p class="text-center text-muted" style="margin:16px 0;">
