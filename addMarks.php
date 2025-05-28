@@ -133,4 +133,9 @@ $subjects = $conn->query(
 <script
     src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+<footer class="container-fluid bg-light">
+    <p class="text-center text-muted" style="margin:16px 0;">
+        Réalisé par <strong>Aazdag Abdellah</strong> — ITIRC4
+    </p>
+</footer>
 </html>
