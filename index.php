@@ -35,4 +35,9 @@
     <?php include 'admin.php'; ?>
     
 </body>
+<footer class="container-fluid bg-light">
+    <p class="text-center text-muted" style="margin:16px 0;">
+        Réalisé par <strong>Aazdag Abdellah</strong> — ITIRC4
+    </p>
+</footer>
 </html>
