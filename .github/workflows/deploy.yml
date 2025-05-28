@@ -1,0 +1,22 @@
+name: Deploy to InfinityFree
+
+on:
+  push:
+    branches: [ "main" ]         # déploiement seulement quand tu pushes sur main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}      # ex: ftpupload.net
+          username: ${{ secrets.FTP_USERNAME }}  # ex: if0_39105974
+          password: ${{ secrets.FTP_PASSWORD }}  # ton mot de passe FTP
+          local-dir: ./                          # racine du repo
+          server-dir: /htdocs/                   # dossier public InfinityFree
