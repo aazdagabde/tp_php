@@ -5,7 +5,7 @@ session_start();           // supprime ces deux lignes si l’accès est public
 
 /* ---------------------- Connexion base de données ----------------------- */
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=showmarks;charset=utf8', 'root', '');
+    $pdo = new PDO("mysql:host=sql211.infinityfree.com;dbname=if0_39105974_showmarks", "if0_39105974", 'jabtcGHVgGa');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die('Connexion échouée : ' . $e->getMessage());

@@ -7,7 +7,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 try {
-    $conn = new PDO("mysql:host=localhost;dbname=showmarks;charset=utf8", "root", '');
+    $conn = new PDO("mysql:host=sql211.infinityfree.com;dbname=if0_39105974_showmarks", "if0_39105974", 'jabtcGHVgGa');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Connexion échouée : " . $e->getMessage());

@@ -20,7 +20,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $conn = new PDO ("mysql:host=localhost;dbname=showmarks", "root", '');
+    $conn = new PDO ("mysql:host=sql211.infinityfree.com;dbname=if0_39105974_showmarks", "if0_39105974", 'jabtcGHVgGa');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM admin WHERE login = :username AND password = :password";
